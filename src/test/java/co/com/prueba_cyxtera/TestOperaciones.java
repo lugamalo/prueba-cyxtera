@@ -2,16 +2,20 @@ package co.com.prueba_cyxtera;
 
 import java.util.ArrayList;
 
+import org.apache.log4j.Logger;
+
 import co.com.prueba_cyxtera.logica.Operaciones;
 
 public class TestOperaciones {
 
+	final static Logger logger = Logger.getLogger(TestOperaciones.class);
+	
 	public static void main(String[] args) {
-
+		
 		/*
 		 * Prueba de la operacion matematica potenciacion
 		 */
-		
+		logger.info("Pruebas unitarias Operaciones  ");
 		System.out.println(" ************ Operacion Matematica Potenciacion *********************");
 		Operaciones op = new Operaciones();
 		

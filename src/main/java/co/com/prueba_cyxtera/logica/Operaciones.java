@@ -2,6 +2,9 @@ package co.com.prueba_cyxtera.logica;
 
 import java.util.ArrayList;
 
+import org.apache.log4j.Logger;
+
+
 /**
  * Esta clase ejecuta la implementacion de las operaciones matematicas
  * 
@@ -10,6 +13,8 @@ import java.util.ArrayList;
  */
 
 public class Operaciones {
+	
+	final static Logger logger = Logger.getLogger(Operaciones.class);
 
 	/**
 	 * Este metodo realiza la suma de operandos dado un arreglo de numeros
@@ -17,8 +22,10 @@ public class Operaciones {
 	 * @return Resultado de la suma de una lista de numeros
 	 */
 	public synchronized int suma(ArrayList<Integer> lOperandos) {
+		logger.info("Operacion Matematica Suma ");
 		lOperandos.forEach((n) -> System.out.println(n));
 		int resultado = lOperandos.stream().reduce(0, (a, b) -> a + b);
+		logger.info("Resultado de la suma " + resultado);
 		return resultado;
 	}
 
@@ -28,6 +35,7 @@ public class Operaciones {
 	 * @return Resultado de la resta de una lista de numeros
 	 */
 	public synchronized int resta(ArrayList<Integer> lOperandos) {
+		logger.info("Operacion Matematica Resta ");
 		int resultado = 0;
 		int count = 0;
 		for (int i = 0; i < lOperandos.size(); i++) {
@@ -40,6 +48,7 @@ public class Operaciones {
 				resultado = resultado - n;
 			}
 		}
+		logger.info("Resultado de la resta " + resultado);
 		return resultado;
 	}
 
@@ -50,8 +59,10 @@ public class Operaciones {
 	 * @return Resultado de la multiplicacion de una lista de numeros
 	 */
 	public synchronized int multiplicacion(ArrayList<Integer> lOperandos) {
+		logger.info("Operacion Matematica Multiplicacion ");
 		lOperandos.forEach((n) -> System.out.println(n));
 		int resultado = lOperandos.stream().reduce(1, (a, b) -> a * b);
+		logger.info("Resultado de la multiplicacion " + resultado);
 		return resultado;
 	}
 
@@ -62,6 +73,7 @@ public class Operaciones {
 	 * @return
 	 */
 	public synchronized double division(ArrayList<Double> lOperandos) {
+		logger.info("Operacion Matematica Division ");
 		double resultado = 0;
 		int count = 0;
 		for (int i = 0; i < lOperandos.size(); i++) {
@@ -74,6 +86,7 @@ public class Operaciones {
 				resultado = resultado / n;
 			}
 		}
+		logger.info("Resultado de la division " + resultado);
 		return resultado;
 	}
 
@@ -84,6 +97,7 @@ public class Operaciones {
 	 * @return Resultado de la potenciacion de una lista de numeros
 	 */
 	public synchronized int potenciacion(ArrayList<Integer> lOperandos) {
+		logger.info("Operacion Matematica potenciacion ");
 		int resultado = 0;
 		int count = 0;
 		for (int i = 0; i < lOperandos.size(); i++) {
@@ -97,6 +111,7 @@ public class Operaciones {
 				resultado = potencia(resultado, n);
 			}
 		}
+		logger.info("Resultado de la potenciacion " + resultado);
 		return resultado;
 	}
 	
