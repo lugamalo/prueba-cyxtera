@@ -20,7 +20,7 @@ public class TestOperaciones {
 		lOperandosPotencia.add(3);
 		lOperandosPotencia.add(2);
 
-		int resultPotencia = op.potenciacion1(lOperandosPotencia);
+		int resultPotencia = op.potenciacion(lOperandosPotencia);
 		System.out.println("Resultado Potenciacion = " + resultPotencia);
 		
 		
