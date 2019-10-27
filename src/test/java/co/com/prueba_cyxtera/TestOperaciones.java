@@ -83,12 +83,12 @@ public class TestOperaciones {
 		 */
 		System.out.println(" ************ Operacion Matematica Division *********************");
 		Operaciones oDivision = new Operaciones();
-		ArrayList<Double> lOperandosDivision = new ArrayList<Double>();
-		lOperandosDivision.add(new Double(9));
-		lOperandosDivision.add(new Double(2));
-		lOperandosDivision.add(new Double(3));
+		ArrayList<Integer> lOperandosDivision = new ArrayList<Integer>();
+		lOperandosDivision.add(9);
+		lOperandosDivision.add(2);
+		lOperandosDivision.add(3);
 		
-		double resultDivision= oDivision.division(lOperandosDivision);
+		int resultDivision= oDivision.division(lOperandosDivision);
 		System.out.println("Resultado Division = " + resultDivision);
 		
 

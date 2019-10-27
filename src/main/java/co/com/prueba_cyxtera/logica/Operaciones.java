@@ -23,7 +23,12 @@ public class Operaciones {
 	 */
 	public synchronized int suma(ArrayList<Integer> lOperandos) {
 		logger.info("Operacion Matematica Suma ");
-		lOperandos.forEach((n) -> System.out.println(n));
+		int count = 1;
+		for (int i = 0; i < lOperandos.size(); i++) {
+			System.out.println(lOperandos.get(i));
+			logger.info(count + " -> Operando = " + + lOperandos.get(i));
+			count++;
+		}
 		int resultado = lOperandos.stream().reduce(0, (a, b) -> a + b);
 		logger.info("Resultado de la suma " + resultado);
 		return resultado;
@@ -42,11 +47,13 @@ public class Operaciones {
 			System.out.println(lOperandos.get(i));
 			if (count == 0) {
 				resultado = lOperandos.get(i);
-				count++;
+				//count++;
 			} else {
 				Integer n = lOperandos.get(i);
 				resultado = resultado - n;
 			}
+			count++;
+			logger.info(count + " -> Operando = " + lOperandos.get(i));
 		}
 		logger.info("Resultado de la resta " + resultado);
 		return resultado;
@@ -60,7 +67,13 @@ public class Operaciones {
 	 */
 	public synchronized int multiplicacion(ArrayList<Integer> lOperandos) {
 		logger.info("Operacion Matematica Multiplicacion ");
-		lOperandos.forEach((n) -> System.out.println(n));
+		//lOperandos.forEach((n) -> System.out.println(n));
+		int count = 1;
+		for (int i = 0; i < lOperandos.size(); i++) {
+			System.out.println(lOperandos.get(i));
+			logger.info(count + " -> Operando = " + + lOperandos.get(i));
+			count++;
+		}
 		int resultado = lOperandos.stream().reduce(1, (a, b) -> a * b);
 		logger.info("Resultado de la multiplicacion " + resultado);
 		return resultado;
@@ -72,19 +85,21 @@ public class Operaciones {
 	 * @param lOperandos
 	 * @return
 	 */
-	public synchronized double division(ArrayList<Double> lOperandos) {
+	public synchronized int division(ArrayList<Integer> lOperandos) {
 		logger.info("Operacion Matematica Division ");
-		double resultado = 0;
+		int resultado = 0;
 		int count = 0;
 		for (int i = 0; i < lOperandos.size(); i++) {
 			System.out.println(lOperandos.get(i));
 			if (count == 0) {
 				resultado = lOperandos.get(i);
-				count++;
+				//count++;
 			} else {
-				double n = lOperandos.get(i);
+				int n = lOperandos.get(i);
 				resultado = resultado / n;
 			}
+			count++;
+			logger.info(count + " -> Operando = " + lOperandos.get(i));
 		}
 		logger.info("Resultado de la division " + resultado);
 		return resultado;
@@ -104,12 +119,13 @@ public class Operaciones {
 			System.out.println(lOperandos.get(i));
 			if (count == 0) {
 				resultado = lOperandos.get(i);
-				count++;
+				//count++;
 			} else {
 				int n = lOperandos.get(i);
-				// System.out.println("obtien n" + n);
 				resultado = potencia(resultado, n);
 			}
+			count++;
+			logger.info(count + " -> Operando = " + lOperandos.get(i));
 		}
 		logger.info("Resultado de la potenciacion " + resultado);
 		return resultado;
