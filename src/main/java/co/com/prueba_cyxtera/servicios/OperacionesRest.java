@@ -224,16 +224,17 @@ public class OperacionesRest {
 
 		});
 		
-		get("/auditoria", (request, response) -> {
-			
+		// Servicio rest que la consulta la base de datos por id y devuelve la informacion
+		//link de ejemplo http://localhost:8081/audita?id=1483724044
+	    get("/audita", (request, response) -> {
+	    	String name = request.session().attribute(SESSION_NAME);
 			String idSession = request.queryParams("id");
 			BaseDatosJDBC app = new BaseDatosJDBC();
 			Auditoria audit = new Auditoria();
 			audit = app.getAuditoriaByID(Integer.valueOf(idSession));
-			//response.redirect("/menu");
-			return "OK";
 
-		});
+            return String.format("<html><body><h3>Se obtuvo la siguiente respuesta fecha insercion => " + audit.getFechaCreacion() + " tipo de operacion =>" + audit.getTipoOperacion() + " operacion => " + audit.getOperacion() + " resultado acumulado => " + audit.getResultadoOperacion() + "</h3></body></html>", name);
+        });
 	}
 
 }

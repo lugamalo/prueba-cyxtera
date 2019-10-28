@@ -65,6 +65,21 @@ Cambiar el path de donde se creo la base de datos dentro del archivo config.prop
 
 ![Screenshot](configDatabase.png)
 
+Registros de Auditoria
+
+Ingresando al shell de sqlite se pueden verificar la informacion registrada por la aplicacion
+
+![Screenshot](sqliteDatoShell.png)
+
+Tambien se diseño un servicio rest que consultara la base de datos de auditoria. En el siguiente ejemplo dado el id de session se obtiene la info de base de datos
+
+```bash
+http://localhost:8081/audita?id=1483724044
+```
+
+
+![Screenshot](restAuditoria.png)
+
 ## Uso de la Aplicacion
 La aplicacion para su compilación y ejecución usa JDK 1.8. A pesar que el pom maven se agrego la configuración es recomendable dentro del IDE configurar la version correcta 
 
