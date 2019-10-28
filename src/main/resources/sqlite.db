@@ -1,0 +1,7 @@
+CREATE TABLE auditoria_operaciones (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+id_session TEXT NOT NULL,
+fecha_operacion TEXT NOT NULL,
+tipo_operacion TEXT NOT NULL,
+operacion TEXT NOT NULL,
+resultado INTEGER);
