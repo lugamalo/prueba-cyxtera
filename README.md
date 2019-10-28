@@ -20,7 +20,7 @@ La aplicación de operaciones matematicas es un ejercicio práctico para la empres
 Luego de clonar el repositorio y acceder al proyecto desde tu IDE favorito, se debe ejecutar la operacion RUN As --> Java Application sobre la clase OperacionesRest, la cual lanza el menu visual y direcciona a la implementacion de los servicios REST
 
 
-![Screenshot](EjecutarAplicacion.png)
+![Screenshot](ejecutarAplicacion.png)
 
 La forma de verificar que el servicio esta disponible por el puerto 8081 que fue el definido es por la consola del IDE tal como se muestra a continuacion.
 
@@ -32,20 +32,20 @@ se tenga permisos de escritura dentro del laptop o desktop. Como se indica en la
 ![Screenshot](configLog4j.png)  
 
 
-##Instalar base de datos SQlite
+## Instalar base de datos SQlite
 
 La base de datos sqlite es un sistema de gestion de datos liviana y portable dentro del proyecto se agrego la base de datos portable, sin embargo como se va descargar en otro equipo se debe modificar
 la ruta donde va quedar instalada la aplicacion
  
-Descargar del sitio ** [sqlite]**(https://www.sqlite.org/download.html)
+Descargar del sitio **[sqlite]**(https://www.sqlite.org/download.html)
 
 ![Screenshot](sqliteDownload.png) 
 
-Descomprimir el precompilado binario en el path de la maquina que desee pero recuerde de configurar las variables de entorno del sistema operativo Windows en el PATH para que desde cualquier terminal de DOS puede acceder
+Descomprimir el precompilado binario en el path de la maquina que desee pero recuerde de configurar las variables de entorno del sistema operativo Windows en el PATH para que desde cualquier terminal de DOS puede acceder al shell de sqlite
 
 ![Screenshot](sqliteDOS.png) 
 
-lanzar comando sqlite3 auditoria para crear la base de datos tal como se indica a continuacion
+Se debe ejecutar el comando **sqlite3 auditoria** para crear la base de datos tal como se indica a continuacion
 
 ```bash
 $sqlite3 auditoria
